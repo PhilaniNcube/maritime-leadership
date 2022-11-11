@@ -11,7 +11,7 @@ const Home: NextPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true)
-    const {first_name, last_name, designation, country, diet, email, id_number, organisation, tel} = Object.fromEntries(new FormData(e.currentTarget));
+    const {first_name, last_name, designation, country, diet, email, id_number, organisation, gender, tel} = Object.fromEntries(new FormData(e.currentTarget));
     console.log({
       first_name,
       last_name,
