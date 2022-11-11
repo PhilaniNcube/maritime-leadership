@@ -20,6 +20,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       email,
       id_number,
       organisation,
+      gender,
       tel,} = req.body
 
     const { data, error } = await serviceRole.from('maritime_leadership_conference').insert([{ first_name,
@@ -30,6 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       email,
       id_number,
       organisation,
+      gender,
       tel}])
 
     console.log({data, error})
@@ -43,6 +45,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       email,
       id_number,
       organisation,
+      gender,
       tel}
 
 
@@ -59,7 +62,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         COUNTRY: subscribingUser.country,
         DIET: subscribingUser.diet,
         IDNUM: subscribingUser.id_number,
-        ORG: subscribingUser.organisation
+        ORG: subscribingUser.organisation,
+        GENDER: subscribingUser.gender,
       }
 
     })

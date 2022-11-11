@@ -22,6 +22,7 @@ const Home: NextPage = () => {
       id_number,
       organisation,
       tel,
+      gender
     });
 
 
@@ -40,6 +41,7 @@ const Home: NextPage = () => {
         id_number,
         organisation,
         tel,
+        gender
       }),
     });
 
@@ -157,8 +159,8 @@ const Home: NextPage = () => {
             </div>
           </div>
 
-          <div className="grid grid-cols-6 gap-3">
-            <div className="col-span-6 sm:col-span-3">
+          <div className="grid grid-cols-9 mt-3 gap-3">
+            <div className="col-span-9 sm:col-span-3">
               <label
                 htmlFor="designation"
                 className="block text-sm font-medium text-gray-700"
@@ -175,6 +177,26 @@ const Home: NextPage = () => {
                 <option>Miss</option>
                 <option>Mrs</option>
                 <option>Professor</option>
+                <option>Doctor</option>
+              </select>
+            </div>
+
+            <div className="col-span-9 sm:col-span-3">
+              <label
+                htmlFor="gender"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Gender
+              </label>
+              <select
+                id="gender"
+                name="gender"
+                autoComplete="gender"
+                className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+              >
+                <option>Male</option>
+                <option>Female</option>
+                <option>Prefer Not To Say</option>
               </select>
             </div>
 
@@ -247,7 +269,13 @@ const Home: NextPage = () => {
               />
             </div>
           </div>
-          <button type="submit" disabled={loading} className="bg-indigo-600 rounded-lg shadow font-medium uppercase text-white px-8 mt-4 py-2 w-fit">{loading ? 'Loading...' : 'Submit'}</button>
+          <button
+            type="submit"
+            disabled={loading}
+            className="bg-indigo-600 rounded-lg shadow font-medium uppercase text-white px-8 mt-4 py-2 w-fit"
+          >
+            {loading ? "Loading..." : "Submit"}
+          </button>
         </form>
       </main>
     </>
