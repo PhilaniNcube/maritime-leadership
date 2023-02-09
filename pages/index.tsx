@@ -72,7 +72,7 @@ const Home: NextPage = () => {
     <>
       <main className="max-w-5xl mx-auto px-4 py-12">
         <Image
-          src="/images/banner_3.jpeg"
+          src="/images/maritime.jpeg"
           alt="Banner"
           className="w-full mx-auto object-cover"
           width={1890}
