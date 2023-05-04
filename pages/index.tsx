@@ -70,7 +70,12 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <main className="max-w-5xl mx-auto px-4 py-12">
+      <main className="max-w-5xl mx-auto px-4 py-12 relative isolate">
+        <div className="absolute inset-0 flex bg-slate-700/60 justify-center items-center">
+            <h2 className="text-xl md:text-3xl text-center text-red-600 font-semibold">
+              Registration Closed. For any enquiries, please contact pr1@saimi.co.za  
+            <h2>
+        </div>
         <Image
           src="/images/maritime.jpeg"
           alt="Banner"
